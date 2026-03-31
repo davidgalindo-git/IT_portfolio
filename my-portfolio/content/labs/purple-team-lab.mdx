@@ -1,0 +1,37 @@
+---
+slug: purple-team-lab
+title: Purple Team Attack Lab
+summary: End-to-end adversary emulation with detection engineering.
+difficulty: Hard
+category: Network / EDR
+timeToCompromise: 4 hours
+tools:
+  - Kali Linux
+  - BloodHound
+  - Sigma
+  - Elastic SIEM
+---
+
+## Objective
+
+Document an end-to-end purple team exercise, from initial access to detection and response.
+
+## Attack Path
+
+```bash
+nmap -sV -p 80,443 target.internal
+# ... more commands ...
+```
+
+## Detection Engineering
+
+```yaml
+sigma_rule:
+  title: Suspicious PowerShell via EncodedCommand
+  status: experimental
+```
+
+## Lessons Learned
+
+- Validate detections against real attacker behavior.
+- Keep all IOCs and TTPs in a single, searchable place.
