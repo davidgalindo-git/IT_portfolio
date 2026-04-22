@@ -1,3 +1,4 @@
+"use client";
 import { Hero } from "@/components/Hero";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { projects } from "@/lib/data";

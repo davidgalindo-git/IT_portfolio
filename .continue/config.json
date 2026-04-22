@@ -1,0 +1,23 @@
+{
+  "models": [
+    {
+      "title": "Local Qwen (Brain)",
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b"
+    },
+    {
+      "title": "DeepSeek (Reasoning)",
+      "provider": "ollama",
+      "model": "deepseek-r1:14b"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Local Autocomplete",
+    "provider": "ollama",
+    "model": "qwen2.5-coder:1.5b"
+  },
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text"
+  }
+}
