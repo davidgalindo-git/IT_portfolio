@@ -2,13 +2,14 @@ import type { NextConfig } from "next";
 
 const contentSecurityPolicy = [
   "default-src 'self';",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vitals.vercel-insights.com;",
+  // Added 'https://*.vercel.app' to allow scripts and connections during deployment
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vitals.vercel-insights.com https://*.vercel.app;",
   "style-src 'self' 'unsafe-inline';",
-  "img-src 'self' blob: data: https://images.unsplash.com;",
-  "connect-src 'self' https://api.supabase.io https://*.supabase.co https://vitals.vercel-insights.com;",
+  "img-src 'self' blob: data: https://images.unsplash.com https://*.vercel.app;",
+  "connect-src 'self' https://api.supabase.io https://*.supabase.co https://vitals.vercel-insights.com https://*.vercel.app;",
   "frame-ancestors 'self';",
-  // Allow iframes only from specific demo domains; replace with your real demos.
-  "frame-src 'self' https://demo.example.com https://*.your-demo-domain.com;",
+  // Updated to be more flexible for your actual demos
+  "frame-src 'self' https://*.vercel.app https://*.github.io;",
 ].join(" ");
 
 const securityHeaders = [
