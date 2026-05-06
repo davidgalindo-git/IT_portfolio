@@ -20,8 +20,7 @@ export default function AdminPage() {
           This is a placeholder admin portal. In production, protect this route with Supabase Auth.
         </p>
 
-        {/* 2. Use 'formAction' directly here */}
-        <form action={formAction} className="mt-6 space-y-4 rounded-xl border border-zinc-800 bg-zinc-950/80 p-4">
+        <form className="mt-6 space-y-4 rounded-xl border border-zinc-800 bg-zinc-950/80 p-4">
 
           {/* Simple Feedback UI */}
           {state?.error && <p className="text-xs text-red-500 bg-red-500/10 p-2 rounded">{state.error}</p>}
@@ -81,10 +80,11 @@ export default function AdminPage() {
           {/* 3. Use 'isPending' to prevent double-submits */}
           <Button
               type="submit"
+              formAction={formAction}
               disabled={isPending}
               className="mt-2 h-8 rounded-full bg-cyan-500 px-4 text-xs font-semibold text-black hover:bg-cyan-400 disabled:opacity-50"
           >
-            {isPending ? "Saving..." : "Save Project"}ß
+            {isPending ? "Saving..." : "Save Project"}
           </Button>
         </form>
       </main>
