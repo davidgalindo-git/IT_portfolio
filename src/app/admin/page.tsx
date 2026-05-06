@@ -1,7 +1,7 @@
 "use client";
 import { useActionState } from "react";
 import { Button } from "@/components/ui/button";
-import {createProject, ProjectFormState} from "@/app/actions";
+import {createProject, type ProjectFormState} from "@/app/actions";
 
 // Define the exact initial state
 const initialState: ProjectFormState = {
@@ -84,7 +84,7 @@ export default function AdminPage() {
               disabled={isPending}
               className="mt-2 h-8 rounded-full bg-cyan-500 px-4 text-xs font-semibold text-black hover:bg-cyan-400 disabled:opacity-50"
           >
-            {isPending ? "Saving..." : "Save Project"}
+            {isPending ? "Saving..." : "Save Project"}ß
           </Button>
         </form>
       </main>
