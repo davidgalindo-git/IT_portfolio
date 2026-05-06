@@ -17,7 +17,6 @@ export async function compileLabMdx<TFrontmatter extends Record<string, unknown>
         remarkPlugins: [remarkGfm],
         rehypePlugins: [
           [
-            // @ts-expect-error rehype-pretty-code types
             rehypePrettyCode,
             {
               theme: "github-dark",
