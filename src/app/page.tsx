@@ -2,7 +2,7 @@
 import { Hero } from "@/components/Hero";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { projects } from "@/lib/data";
-
+//
 export default function Home() {
     const devProjects = projects.filter((p) => p.category === "dev");
     const securityProjects = projects.filter((p) => p.category === "security");
