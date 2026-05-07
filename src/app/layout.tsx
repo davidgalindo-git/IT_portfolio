@@ -34,8 +34,8 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col">
           <Navbar />
           {children}
-          <AskMyAI />
-          <Analytics />
+          {/*<AskMyAI />*/}
+          {/*<Analytics />*/}
         </div>
       </body>
     </html>
