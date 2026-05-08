@@ -17,13 +17,13 @@ export const projects: Project[] = [
   {
     id: "0",
     slug: "emusic",
-    title: "E-Music",
+    title: "eMusic",
     description: "A full-stack music streaming app with playlists, search, and audio playback.",
     category: "dev",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
+    tags: ["Vue", "JavaScript"],
     isEmbedded: true,
     demoUrl: "https://emusic.davidgalindo-it.com",
-    githubUrl: "https://github.com/your-handle/emusic",
+    githubUrl: "https://github.com/davidgalindo-git/eMusic",
   },
   {
     id: "1",

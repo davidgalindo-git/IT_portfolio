@@ -50,9 +50,9 @@ export function ProjectGrid({ title, projects, id }: ProjectGridProps) {
                 size="sm"
                 className="h-8 rounded-full bg-cyan-500 px-3 text-xs font-semibold text-black hover:bg-cyan-400"
               >
-                <Link href={project.isEmbedded ? `/demo/${project.slug}` : project.demoUrl} target={project.isEmbedded ? "_self" : "_blank"}>
-                  Live Demo
-                </Link>
+                  <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                      Live Demo
+                  </Link>
               </Button>
               <Button
                 asChild
@@ -60,9 +60,9 @@ export function ProjectGrid({ title, projects, id }: ProjectGridProps) {
                 variant="outline"
                 className="h-8 rounded-full border-zinc-700 bg-zinc-950 text-xs font-medium text-zinc-200 hover:border-cyan-500/70 hover:text-cyan-200"
               >
-                <Link href={project.githubUrl} target="_blank">
-                  GitHub
-                </Link>
+                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      GitHub
+                  </Link>
               </Button>
             </CardFooter>
           </Card>
