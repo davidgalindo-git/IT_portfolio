@@ -31,6 +31,13 @@ export function ProjectGrid({ title, projects, id }: ProjectGridProps) {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
+                {project.imageUrl && (
+                    <img
+                        src={project.imageUrl}
+                        alt={`${project.title} preview`}
+                        className="w-full rounded-lg object-cover transition-all duration-500 hover:scale-105"
+                    />
+                )}
               <p className="text-xs text-zinc-400">{project.description}</p>
               <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (

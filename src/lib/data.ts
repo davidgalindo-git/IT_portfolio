@@ -4,13 +4,13 @@ export type Project = {
   id: string;
   slug: string;
   title: string;
-  category: ProjectCategory;
   description: string;
+  category: ProjectCategory;
   tags: string[];
   imageUrl?: string;
+  isEmbedded: boolean;
   demoUrl: string;
   githubUrl: string;
-  isEmbedded: boolean;
 };
 
 export const projects: Project[] = [
@@ -21,6 +21,7 @@ export const projects: Project[] = [
     description: "A full-stack music streaming app with playlists, search, and audio playback.",
     category: "dev",
     tags: ["Vue", "JavaScript"],
+    imageUrl: "/previews/emusic.webp",
     isEmbedded: true,
     demoUrl: "https://emusic.davidgalindo-it.com",
     githubUrl: "https://github.com/davidgalindo-git/eMusic",
